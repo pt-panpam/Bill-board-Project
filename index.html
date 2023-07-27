@@ -10,10 +10,10 @@
 <body>
   <div class="container">
     <div class="form">
-      <h1>Sign Up</h1>
+      <h1 id="changetitle">Sign Up</h1>
       <form>
         <div class="input-group">
-          <div class="input-field">
+          <div class="input-field" id="hidename">
             <i class="fa-solid fa-user-tie"></i>
             <input type="text" placeholder="Name">
             </div>
@@ -21,7 +21,7 @@
               <i class="fa-solid fa-at"></i>
               <input type="email" placeholder="email">
             </div>
-            <div class="input-field">
+            <div class="input-field" id="hidephone">
               <i class="fa-solid fa-mobile"></i>
             <input type="tel" placeholder="Phone number">
             </div>
@@ -32,13 +32,35 @@
             <p>Forget Password <a href="#">Click here</a></p>
             </div>
             <div class="btn-field">
-              <button type="button">Sign Up</button>
-              <button type="button" class="disable">Sign In</button>
+              <button type="button" id="signupbtn">Sign Up</button>
+              <button type="button" id="signinbtn" class="disable">Sign In</button>
             </div>
           </div>
         </div>
       </form>
     </div>
   </div>
+  <script>
+    let signupbtn = document.getElementById("signupbtn")
+    let signinbtn = document.getElementById("signinbtn")
+    let hidename = document.getElementById("hidename")
+    let hidenumber = document.getElementById("hidenumber")
+    let changetitle = document.getElementById("changetitle")
+
+    signinbtn.onclick=function(){
+      hidename.style.maxHeight="0"
+      hidephone.style.maxHeight="0"
+      changetitle.innerHTML=" Sign In";
+      signupbtn.classList.add("disable");
+      signinbtn.classList.remove("disable");
+       }
+       signupbtn.onclick=function(){
+      hidename.style.maxHeight="60px"
+      hidephone.style.maxHeight="60px"
+      changetitle.innerHTML=" Sign Up";
+      signupbtn.classList.remove("disable");
+      signinbtn.classList.add("disable");
+       }
+  </script>
 </body>
 </html>
