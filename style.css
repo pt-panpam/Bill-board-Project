@@ -24,9 +24,11 @@
     text-align: center;
 }
 .form h1{
-    font-size: 30px;
-    margin-bottom: 60px;
+    font-size: 35px;
+    margin-bottom: 40px;
+    margin-top: 10px;
     position: relative;
+    color: blueviolet;
 }
 .input-field{
     margin: 15px 0;
@@ -41,4 +43,40 @@ input{
     border: 0;
     outline: 0;
     padding: 18px 15px;
+}
+.input-field i{
+    margin-left: 15px;
+    color: #999;
+}
+.input-group p{
+    text-align: left;
+    font-size: 15px;
+    color: #999;
+}
+form p a{
+    text-decoration: none;
+    color: blueviolet;
+}
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-field button{
+    flex-basis: 48%;
+    background:blueviolet;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+
+}
+.input-group{
+    height: 320px;
+}
+.btn-field button.disable{
+    background-color: #999;
 }
