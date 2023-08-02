@@ -3,64 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billboard-Project-by Abhijeet Mishra</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/665e7ae23f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style1.css">
+    <title>Home-Page</title>
 </head>
 <body>
-  <div class="container">
-    <div class="form">
-      <h1 id="changetitle">Sign Up</h1>
-      <form>
-        <div class="input-group">
-          <div class="input-field" id="hidename">
-            <i class="fa-solid fa-user-tie"></i>
-            <input type="text" placeholder="Name">
-            </div>
-            <div class="input-field">
-              <i class="fa-solid fa-at"></i>
-              <input type="email" placeholder="email">
-            </div>
-            <div class="input-field" id="hidephone">
-              <i class="fa-solid fa-mobile"></i>
-            <input type="tel" placeholder="Phone number">
-            </div>
-            <div class="input-field">
-              <i class="fa-solid fa-key"></i>
-              <input type="password" placeholder="Password">
-            </div>
-            <p>Forget Password <a href="#">Click here</a></p>
-            </div>
-            <div class="btn-field">
-              <button type="button" id="signupbtn"><a href="home.html"></a>Sign Up</button>
-              <button type="button" id="signinbtn" class="disable"><a href="home.html"></a>Sign In</button>
-            </div>
-          </div>
+    <div class="header">
+        <div class="companyname">
+            <h2>Braj Billboard</h2>
         </div>
-      </form>
+        <div>
+            <input class="searchlocation" type="text" placeholder="Enter loaction">
+        </div>
+        <div class="nevibar">
+            <div class="nevi">Home</div>
+            <div class="nevi">
+                <a class="link" href="login.html">login</a>
+            </div>
+        </div>
     </div>
-  </div>
-  <script>
-    let signupbtn = document.getElementById("signupbtn")
-    let signinbtn = document.getElementById("signinbtn")
-    let hidename = document.getElementById("hidename")
-    let hidenumber = document.getElementById("hidenumber")
-    let changetitle = document.getElementById("changetitle")
+    <div class="outer">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <div class="textshow">
+                        <h1>Billboard & Details</h1>
+                        <p>Hoarding Name = Near GLA University NH-2, Mathura</p>
+                        <p> Size (H * W) = 20ft * 20ft</p>
+                        <p>Facing Direction =	Facing GLA University Back to Back</p>
+                        <p>Hoarding Code =	Oms-02 </p>
+                        <p>Price =	0</p>
+                        <p>Light Type = No Light </p>
+                        <p>Daily Traffic = Normal</p>
+                        <button class="book">Book Now</button>
+                    </div>
+                    <div class="imageshow">
+                        <img class="images" src="GLA.jpg" alt="gla"></div>
+                 </div>
+                <div class="slide">
+                    <div class="textshow">
+                        <h1>Billboard & Details</h1>
+                        <p> Hoarding Name =		Goverdhan Chauraha, Mathura </p>
+                        <p> Size (H * W) =		50ft * 50ft </p>
+                        <p>Facing Direction =		Facing – Mandi Chauraha </p>
+                        <p>Hoarding Code =		KPS-171 </p>
+                        <p>Price =		35000</p>
+                        <p>Light Type =		No Light</p>
+                        <p> Daily Traffic =		Normal</p>
+                        <button class="book">Book Now</button>
+                    </div>
+                    <div class="imageshow"><img src="govardhan.jpg" class="images" alt=""></div>
+                </div>
+                <div class="slide">
+                    <div class="textshow">
+                        <h1>Billboard & Details</h1>
+                        <p>Hoarding Name  =		Chhatikara chaurah NH-2, Mathura</p>
+                        <p>Size (H * W)  =		50ft * 50ft </p>
+                        <p>Facing Direction  =		Facing Chhatikara Chauraha </p>
+                        <p>Hoarding Code =		Oms-01 </p>
+                        <p>Price =		0 </p>
+                        <p>Light Type =		No Light </p>
+                        <p>Daily Traffic =		Normal </p>
+                        <button class="book">Book Now</button>
+                    </div>
+                    <div class="imageshow"><img src="chattikara.jpg" class="images" alt=""></div>
+                </div>
+                <div class="slide">
+                    <div class="textshow">
+                        <h1>Billboard & Details</h1>
+                        <p>Hoarding Name =		Holi Gate Fhatak, Mathura</p>
+                        <p>Size (H * W)	 =	20ft * 20ft </p>
+                        <p>Facing Direction =		Facing Holi Gate </p>
+                        <p>Hoarding Code =		Mnas-153 </p>
+                        <p>Price	 =	0 </p>
+                        <p>Light Type  =		No Light </p>
+                        <p>Daily Traffic =		Normal </p>
+                        <button class="book">Book Now</button>
+                    </div>
+                    <div class="imageshow"><img src="holigate.jpg" class="images" alt=""></div>
+                </div>
+            </div>
+            <div class="slide-icons">
+                <span class="slide-icon" onclick="slideTo('prev')">&#9664;</span>
+                <span class="slide-icon" onclick="slideTo('next')">&#9654;</span>
+            </div>
+        </div>
+    </div>
+    <script>
+       let slideIndex = 1;
 
-    signinbtn.onclick=function(){
-      hidename.style.maxHeight="0"
-      hidephone.style.maxHeight="0"
-      changetitle.innerHTML=" Sign In";
-      signupbtn.classList.add("disable");
-      signinbtn.classList.remove("disable");
-       }
-       signupbtn.onclick=function(){
-      hidename.style.maxHeight="60px"
-      hidephone.style.maxHeight="60px"
-      changetitle.innerHTML=" Sign Up";
-      signupbtn.classList.remove("disable");
-      signinbtn.classList.add("disable");
-       }
-  </script>
+function slideTo(direction) {
+    const slider = document.querySelector('.slider');
+    if (direction === 'prev') {
+        slideIndex--;
+    } else if (direction === 'next') {
+        slideIndex++;
+    }
+
+    if (slideIndex < 1) slideIndex = 5;
+    if (slideIndex > 5) slideIndex = 1;
+
+    slider.style.transform = `translateX(${(slideIndex - 1) * -20}%)`;
+}
+    </script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Brajbillboard.com. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
