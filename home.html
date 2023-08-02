@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="login" href="index.html">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="companyname">
+            <h2>Braj Billboard</h2>
+        </div>
+        <div>
+            <input class="searchlocation" type="text" placeholder="Enter loaction">
+        </div>
+        <div class="nevibar">
+            <div class="nevi">Home</div>
+            <div class="nevi"><a href="index.html"></a>login</div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <div class="textshow">
+                        <h1>Billboard & Details</h1>
+                        <p>Hoarding Name = Near GLA University NH-2, Mathura</p>
+                        <p> Size (H * W) = 20ft * 20ft</p>
+                        <p>Facing Direction =	Facing GLA University Back to Back</p>
+                        <p>Hoarding Code =	Oms-02 </p>
+                        <p>Price =	0</p>
+                        <p>Light Type = No Light </p>
+                        <p>Daily Traffic = Normal</p>
+                        <button class="book">Book Now</button>
+                    </div>
+                    <div class="imageshow">
+                        <img class="images" src="GLA.jpg" alt="gla"></div>
+                 </div>
+                <div class="slide">
+                    <div class="textshow">
+                        <h1>Billboard & Details</h1>
+                        <p> Hoarding Name =		Goverdhan Chauraha, Mathura </p>
+                        <p> Size (H * W) =		50ft * 50ft </p>
+                        <p>Facing Direction =		Facing – Mandi Chauraha </p>
+                        <p>Hoarding Code =		KPS-171 </p>
+                        <p>Price =		35000</p>
+                        <p>Light Type =		No Light</p>
+                        <p> Daily Traffic =		Normal</p>
+                        <button class="book">Book Now</button>
+                    </div>
+                    <div class="imageshow"><img src="govardhan.jpg" class="images" alt=""></div>
+                </div>
+                <div class="slide">
+                    <div class="textshow">
+                        <h1>Billboard & Details</h1>
+                        <p>Hoarding Name  =		Chhatikara chaurah NH-2, Mathura</p>
+                        <p>Size (H * W)  =		50ft * 50ft </p>
+                        <p>Facing Direction  =		Facing Chhatikara Chauraha </p>
+                        <p>Hoarding Code =		Oms-01 </p>
+                        <p>Price =		0 </p>
+                        <p>Light Type =		No Light </p>
+                        <p>Daily Traffic =		Normal </p>
+                        <button class="book">Book Now</button>
+                    </div>
+                    <div class="imageshow"><img src="chattikara.jpg" class="images" alt=""></div>
+                </div>
+                <div class="slide">
+                    <div class="textshow">
+                        <h1>Billboard & Details</h1>
+                        <p>Hoarding Name =		Holi Gate Fhatak, Mathura</p>
+                        <p>Size (H * W)	 =	20ft * 20ft </p>
+                        <p>Facing Direction =		Facing Holi Gate </p>
+                        <p>Hoarding Code =		Mnas-153 </p>
+                        <p>Price	 =	0 </p>
+                        <p>Light Type  =		No Light </p>
+                        <p>Daily Traffic =		Normal </p>
+                        <button class="book">Book Now</button>
+                    </div>
+                    <div class="imageshow"><img src="holigate.jpg" class="images" alt=""></div>
+                </div>
+            </div>
+            <div class="slide-icons">
+                <span class="slide-icon" onclick="slideTo('prev')">&#9664;</span>
+                <span class="slide-icon" onclick="slideTo('next')">&#9654;</span>
+            </div>
+        </div>
+    </div>
+    <script>
+       let slideIndex = 1;
+
+function slideTo(direction) {
+    const slider = document.querySelector('.slider');
+    if (direction === 'prev') {
+        slideIndex--;
+    } else if (direction === 'next') {
+        slideIndex++;
+    }
+
+    if (slideIndex < 1) slideIndex = 5;
+    if (slideIndex > 5) slideIndex = 1;
+
+    slider.style.transform = `translateX(${(slideIndex - 1) * -20}%)`;
+}
+    </script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Brajbillboard.com. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
